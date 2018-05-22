@@ -1,0 +1,52 @@
+
+
+.play-button {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+
+
+    &:hover {
+        #back {
+            fill: #000;   
+            transition: all .2s ease;
+        }
+
+        #stroke {
+            stroke: #000;
+            transition: all .2s ease;
+        }
+
+        #icon {
+            fill: $mainColor;
+            transition: all .2s ease;
+        }
+    }
+}
+
+.modal {
+    background: rgba(0,0,0,.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    &.open {
+        display: flex;
+    }
+
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}

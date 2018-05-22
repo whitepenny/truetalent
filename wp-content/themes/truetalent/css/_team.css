@@ -1,0 +1,257 @@
+
+.member-content__container {
+    padding: 14.0rem 1.0rem 4.0rem 1.0rem;
+}
+
+.single-member-detail {
+    padding-top: 14.0rem;
+}
+
+.member-content {
+    max-width: 80%;
+    margin: 0 auto;
+
+    h1 {
+        @mixin alpha;
+        font-family: $bodyFont;
+    }
+}
+
+.partner-content  {
+    display: block;
+    padding-top: 7.0rem;
+    @media (min-width: 1000px) {
+        display: flex;    
+    }
+    
+}
+
+.single-member-image, .member-snapshot {
+    flex: 0 0 400px;
+    margin-bottom: 4.0rem;
+    order: 2;
+    @media (min-width: 1000px) {
+        margin-left: 150px;    
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.member-snapshot {
+    h2 {
+
+        font-size: 2.6rem;
+        line-height: 3.4rem;
+        @media (min-width: 1000px) {
+            font-size: 3.0rem;
+            line-height: 3.8rem;    
+        }
+        
+    }
+}
+
+.single-member-details {
+    padding: 1.6rem;
+    background: $mainColor;
+
+    a {
+        color: #fff;
+        display: inline-block;
+        margin-right: 1.0rem;
+    }
+}
+
+.member-overview-content {
+    text-align: center;
+    max-width: 500px;
+}
+
+.member {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    @mixin noanimation;
+
+    @media (min-width: 768px) {
+        @mixin animation;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    background: #333;
+
+    .member {
+        width: 100%;
+
+        @media (min-width: 768px) {
+            width: 50%;
+        }
+
+        @media (min-width: 1024px) {
+            width: 25%;    
+        }
+        
+    }
+}
+
+.member-details {
+    
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    opacity: 0;    
+    background: color($mainColor alpha(.8));
+    @mixin animation;
+    padding: 2.0rem;
+    
+
+    h2 {
+        font-size: 3.6rem;
+        line-height: 4.6rem;
+        margin: 2.0rem;
+        margin: 0 0 1.0rem 0;
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        line-height: 2.6rem;
+        letter-spacing: .2rem;
+        margin-bottom: 5.0rem;
+        font-family: $bodyFont;
+        text-transform: uppercase;
+    }
+
+    @media (min-width: 768px) {
+        &:hover, &.active {
+            display: flex;
+            opacity: 1;
+        }    
+    }
+
+
+    .btn-primary {
+        border: 2px solid #000;
+        background: none;
+
+        &:hover {
+            background: #000;
+            color: $mainColor;
+        }
+    }
+}
+
+.member-name {
+    text-align: center;
+    padding: 1.6rem;
+    background: #fff;
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.member-header {
+    height: 400px;
+
+    @media (min-width: $tabletSize) {
+        height: 600px;
+    }
+}
+
+.team {
+    header {
+        padding: 4.0rem 0;
+        text-align: center;
+        @mixin delta;
+    }
+}
+
+.member-overview-content {
+    @mixin epsilon;
+}
+
+.member-detail {
+
+    @media (min-width: $phoneSize) {
+        width: 60%;    
+    }
+    
+    h1 {
+        
+        border-bottom: 1px solid #222;
+        padding-bottom: 2.0rem;
+        margin-bottom: 2.0rem;
+        @mixin tertiary-heading;
+
+    }
+
+    h2 {
+        @mixin standard-heading;
+    }
+}
+
+.partner-detail {
+    margin-bottom: 4.0rem;
+    width: 100%;
+    @media (min-width: 1000px) {
+        width: 60%;    
+    }
+}
+
+.member-detail__meta {
+    list-style: none;
+    margin-bottom: 3.0rem;
+
+    i {
+        color: $mainColor;
+        display: inline-block;
+        margin-right: .5rem;
+    }
+    
+    li {
+        display: inline-block;
+        margin-right: 2.0rem;
+        
+    }
+}
+.member-sidebar {
+    order: 2;
+    margin-bottom: 3.0rem;
+    @media (min-width: $phoneSize) {
+        width: 28%;    
+    }
+}
+
+.team-grid__heading {
+    font-family: 'Vollkorn', serif;
+    font-size: 3.0rem;
+    text-align: center;
+    padding: 2.0rem;
+    background: #000;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .team-grid__heading {
+        font-size: 3.0rem;
+        line-height: 5.0rem;
+    }
+}

@@ -1,0 +1,63 @@
+.about-header {
+    text-align: center;
+    padding: 3.0rem 2.0rem;
+
+    @media (min-width: $phoneSize) {
+        padding: 3.0rem 12.0rem;        
+    }
+
+    h2 {
+        @mixin tertiary-heading;    
+    }
+}
+
+.subsidiary {
+    padding-top: 6.0rem;
+    padding-bottom: 6.0rem;
+    text-align: center;
+}
+
+.subsidiary__content {
+    
+    margin: 0 auto;
+    margin-bottom: 4.0rem;
+
+    @media (min-width: $phoneSize) {
+        width: 60%;
+    }
+}
+
+.subsidiary__breaker {
+    height: 1px;
+    width: 100%;
+    background: #ccc;
+    margin-bottom: 4.0rem;
+}
+
+.subsidiary:nth-of-type(odd) {
+    background: $backgroundColor;
+}
+
+.subsidiary__logos {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.subsidiary-logo {
+    
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 2.0rem;
+    @media (min-width: $phoneSize) {
+        width: 18%;
+        margin: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}

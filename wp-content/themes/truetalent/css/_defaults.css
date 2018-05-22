@@ -1,0 +1,274 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-text-size-adjust: 100%;
+     text-rendering: optimizeLegibility;
+     -moz-osx-font-smoothing: grayscale;
+     font-smoothing: antialiased;
+     -webkit-font-smoothing: antialiased;
+     text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+body {
+    font-family: $bodyFont, sans-serif;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+@define-mixin clearfix {
+  *zoom: 1;
+  
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+ 
+  &:after {
+    clear: both;
+  }
+}
+
+
+%row, .row {
+    @mixin clearfix;
+}
+
+@define-mixin hide {
+    display: none;
+}
+
+@define-mixin show {
+    display: block;
+}
+
+@define-mixin unstyled-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@define-mixin horizontal-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@define-mixin cover-background {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+}
+
+@define-mixin offset-border {
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 80px;
+    border-top: 1px solid #ddd;
+    margin: 20px auto 20px auto;
+
+  }
+}
+
+.circular {
+    border-radius: 50%;
+}
+
+
+@define-mixin animation {
+  -webkit-transition: all .5s ease !important;
+  -moz-transition: all .5s ease !important;
+  -ms-transition: all .5s ease !important;
+  -o-transition: all .5s ease !important;
+  transition: all .5s ease !important;
+}
+
+@define-mixin noanimation {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont, sans-serif;
+  margin: 0;
+  font-weight: normal;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ol {
+  list-style: none;
+  padding: 0;
+}  
+
+.btn, a {
+  @mixin animation;
+}
+
+.center-block {
+  float: none;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.centered-content {
+  
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: $phoneSize) {
+  .half {
+    margin-right: 10px;
+  }
+
+  .half-end {
+    margin-left: 10px;
+  }  
+}
+
+
+
+@define-mixin container {
+  max-width: 110.0rem;
+  margin: 0 auto;
+}
+
+.container .container {
+    width: 100%;
+    padding: 0;
+}
+
+
+/*Buttons and Links*/
+
+@define-mixin btn {
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 2.0rem 3.6rem;
+    border: 0;
+    font-size: 1.3rem;
+    line-height: 1.2rem;
+}
+
+.btn-primary {
+    @mixin btn;
+    background: $mainColor;
+    color: #000;
+    font-weight: 600;
+    display: inline-block;
+    cursor: pointer;
+    font-family: $bodyFont;
+
+    &:hover {
+        background: #000;
+        color: $mainColor;
+    }
+}
+
+.btn-secondary {
+    border: 2px solid $secondaryColor;
+    line-height: .8rem;
+    color: $secondaryColor;
+
+    &:hover {
+        background: $secondaryColor;
+        color: #fff;
+    }
+}
+
+/*Headings*/
+
+@define-mixin alpha {
+    font-size: 4.6rem;
+    line-height: 5.4rem;
+}
+
+@define-mixin bravo {
+    font-size: 3.0rem;
+    line-height: 4.4rem;
+}
+
+@define-mixin charlie {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+}
+
+@define-mixin delta {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+}
+
+@define-mixin epsilon {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+
+@define-mixin foxtrot {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+@define-mixin jumbo {
+    font-size: 9.8rem;
+    line-height: 10.8rem;
+}
+
+/*Content*/
+
+a {
+  color: #000;
+  text-decoration: none;
+
+  &:hover {
+    color: #666;
+  }
+}
+
+
+@define-mixin decorated {
+    padding-bottom: 4px;
+    border-bottom: 4px solid $secondaryColor;
+}
+
+.decorated {
+    @mixin decorated;
+}
+
+.nopadding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+

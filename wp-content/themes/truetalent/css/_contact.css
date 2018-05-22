@@ -1,0 +1,108 @@
+.contact-form {
+    li {
+        display: block;
+        margin-bottom: 2.0rem;
+    }
+
+    span {
+        width: 100%;
+        display: block;
+    }
+
+    input[type='text'],
+        input[type='url'],
+        input[type='email'],
+        input[type='tel'],
+        input[type='number'],
+        input[type='password'],
+        input[type='file'],
+        textarea  {
+        width: 100%;
+        border: 0;
+        background: #eee;
+        padding: 2.0rem;
+        font-size: 1.6rem;
+
+    }
+
+    select {
+        appearance: none;
+        background: url('../dist/img/caret-down.svg') no-repeat 97% transparent;
+        background-color: #eee;
+        background-size: 1.2rem;
+        border-radius: 0;
+        padding: 2.0rem !important; 
+        width: 100%;
+        border: 0;
+        font-size: 1.6rem;
+        color: #777;
+
+        @media (min-width: 748px) {
+             
+            width: 50%;
+        }
+
+        &::-ms-expand {
+            display: none;
+        }
+    }
+
+    .gfield_contains_required {
+        input::placeholder {
+            font-weight: bold;
+        }
+    }
+
+    input[type="submit"] {
+        width: auto;
+    }
+
+    .field_sublabel_below label {
+        display: none;
+    }
+
+    .ginput_complex {
+        @media (min-width: $phoneSize) {
+            display: flex;
+            margin: 0 -1.0rem;    
+        }
+        
+        span {
+            margin-bottom: 2.0rem;
+            @media (min-width: $phoneSize) {
+                margin: 0 1.0rem;    
+            }
+            
+        }
+    }
+
+    .validation_error {
+        background-color:mistyrose;
+        padding: 2.0rem;
+        color: #222;
+    }
+
+    .gfield_error {
+
+        input {
+            border: 1px solid crimson;
+        }
+        .validation_message {
+            background-color: mistyrose;
+            margin-top: 1.0rem;
+            padding: .5rem 2.0rem;
+            color: #222;
+        }
+    }
+
+    .gfield_description, .gsection_description {
+        padding: 0 16px 5px 0;
+        font-size: 1.3rem;
+    }
+
+    .hidden_label {
+        label {
+            display: none;
+        }
+    }
+}

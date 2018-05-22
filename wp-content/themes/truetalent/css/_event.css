@@ -1,0 +1,392 @@
+
+
+.agenda {
+    
+    justify-content: space-between;
+    padding: 2.0rem 0;
+    align-items: center;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+        padding: 5.0rem 0;
+        margin-bottom: 3.0rem;
+    }
+
+    div {
+        margin-bottom: 5.0rem;
+        @media (min-width: $phoneSize) {
+            width: 50%;    
+            margin-bottom: 0;
+        }
+        
+    }
+
+    div.wide {
+        @media (min-width: $phoneSize) {
+            width: 75%;
+        }
+    }
+
+    div:nth-child(2) {
+        margin-bottom: 0;
+        @media (min-width: $phoneSize) {
+            width: 35%;   
+            margin: 0; 
+        }
+    }
+}
+
+.agenda__heading {
+    @mixin secondary-heading;
+}
+
+.quote-icon {
+    &:before {
+    content: url('../dist/img/blockquote.svg');
+    }
+}
+
+.agenda__quote {
+    @mixin standard-heading;
+    font-size: 1.8rem;
+    color: #000;
+    text-align: center;
+    margin: 0;
+}
+
+.agenda__citation {
+    @mixin whisper;
+    font-family: $bodyFont;
+    font-weight: 600;
+}
+
+.speakers__heading {
+    @mixin secondary-heading;
+}
+
+.speakers__intro {
+
+    @media (min-width: $phoneSize) {
+        width: 75%;    
+    }
+    
+}
+
+.speakers {
+    padding-bottom: 6.0rem;
+}
+
+.speakers-grid {
+    
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3.0rem 0 0 0;
+    align-items: stretch;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+    }
+}
+
+.speaker {
+    
+    margin: 0 auto;
+    margin-bottom: 3.0rem;
+    max-width: 40.0rem;
+    @media (min-width: $phoneSize) {
+        margin-bottom: 6.0rem;
+        width: 48%;
+        max-width: none;
+    }
+
+    @media (min-width: $tabletSize) {
+        width: 24%;
+    }
+
+    &.empty {
+        margin-bottom: 0;
+    }
+}
+
+.speaker__photo {
+    border-bottom: 7px solid $mainColor;
+}
+
+.speaker__name {
+    @mixin standard-heading;
+    margin-bottom: .5rem;
+}
+
+.attendees__heading {
+    @mixin secondary-heading;
+}
+
+.attendees__intro {
+
+    @media (min-width: $phoneSize) {
+        width: 75%;    
+    }
+    
+}
+
+.attendees-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3.0rem 2.0rem;
+    align-items: stretch;
+
+    @media (min-width: $phoneSize) {
+        padding-bottom: 10.0rem;
+    }
+}
+
+.attendee {
+    
+    background: $backgroundColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5.0rem 0;
+    width: 48%;
+    margin: 1%;
+
+    @media (min-width: $phoneSize) {
+        width: 23%;
+        margin: 1%;    
+    }
+    
+}
+
+.attendee__logo {
+    max-width: 80%;
+}
+
+.cta {
+    background: $backgroundColor;
+    padding: 3.0rem 0;
+}
+
+.cta__content {
+    @mixin container;
+    padding: 2.0rem;
+    justify-content: space-between;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+    }
+
+    h2 {
+        flex: 0 0 30%;
+        margin-bottom: 3.0rem;
+        @media (min-width: $phoneSize) {
+            margin: 0 5rem 0 0;    
+        }
+        
+    }
+}
+
+.cta-form {
+    
+    align-items: stretch;
+    font-family: $bodyFont;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+    }
+
+    span {
+        display: inline-block;
+        width: 100%;
+        margin: 0 0 2rem 0;
+
+        @media (min-width: $phoneSize) {
+            width: 200px;
+            margin: 0 2.0rem 0 0;
+        }
+        input {
+            font-size: 1.8rem;
+            max-width: 100%;
+            padding: 1.4rem;
+            border: 0;
+            font-family: $bodyFont;
+        }
+    }
+}
+
+.sponsorship {
+    
+    justify-content: space-between;
+    padding-top: 5.0rem;
+    padding-bottom: 5.0rem;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+        padding-top: 10.0rem;
+        padding-bottom: 10.0rem;
+    }
+
+    a {
+        text-decoration: underline;
+        
+        &:hover {
+            color: $mainColor;
+        } 
+    }
+}
+
+.sponsorship__heading {
+    @mixin secondary-heading;
+}
+
+.sponsorship__content {
+
+    @media (min-width: $phoneSize) {
+        width: 60%;    
+    }
+    
+}
+
+.upcoming-events {
+    padding-top: 5.0rem;
+}
+
+.upcoming-events__heading {
+    @mixin secondary-heading;
+    margin-top: 3.0rem;
+    margin-bottom: 3.0rem;
+
+    @media (min-width: $phoneSize) {
+        margin-bottom: 6.0rem;
+    }
+}
+
+.featured-events {
+    max-width: 1200px;
+    margin: 0 auto;
+    .slick-prev, .slick-next {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        appearance: none;
+        background: $mainColor;
+        border: 0;
+        width: 4.0rem;
+        height: 4.0rem;
+        margin-top: -2.0rem;
+        z-index: 3;
+        cursor: pointer;
+        text-indent: -9999px;
+        border-radius: 0;
+
+        &:before {
+            position: absolute;
+            font-family: "FontAwesome";
+            content: '\f053';
+            font-size: 2.0rem;
+            color: #000;
+            text-indent: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    .slick-next {
+        right: 0;
+        left: auto;
+
+        &:before {
+            content: '\f054'
+        }
+    }
+}
+
+.featured-event__heading {
+    @mixin tertiary-heading;
+    font-family: $bodyFont;
+}
+
+.featured-event__button {
+    margin-top: 2.0rem;
+    margin-bottom: 2.0rem;
+}
+
+.event-overview {
+    
+    padding: 2.0rem;
+    margin: 0 auto;
+
+    @media (min-width: $phoneSize) {
+        display: flex;
+        min-height: 50.0rem;
+        max-width: 160.0rem;
+    }
+
+    div {
+
+        @media (min-width: $phoneSize) {
+            width: 50%;    
+        }
+        
+    }
+}
+
+.event-overview__content {
+    
+    background: $backgroundColor;
+    padding: 5.0rem 2.0rem;
+    @media (min-width: $phoneSize) {
+        padding: 10.0rem;
+    }
+
+    h2 {
+        @mixin standard-heading;
+
+        @media (min-width: $phoneSize) {
+            @mixin tertiary-heading;    
+        }
+        
+    }
+}
+
+.event-overview__still {
+    @mixin cover-background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30.0rem;
+}
+
+.past-event-details {
+    margin-bottom: 5.0rem;
+    
+    iframe {
+        margin-bottom: 4.0rem;
+        max-width: 100%;
+    }
+
+    h3 {
+        @mixin standard-heading;
+    }
+}
+
+
+.sponsor {
+    
+    margin-bottom: 5.0rem;
+    @media (min-width: $phoneSize) {    
+        margin-bottom: 10.0rem;
+    }   
+}
+
+.event-detail {
+    padding-top: 2.0rem;
+
+    @media (min-width: $phoneSize) {
+        padding-top: 5.0rem;    
+    }
+}

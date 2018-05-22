@@ -1,0 +1,22 @@
+$headingFont: 'Vollkorn', serif;
+$bodyFont: 'Open Sans', serif;
+$alternateFont: 'Open Sans', sans-serif;
+$mainColor: #fcd804;
+$secondaryColor: #72D45E;
+$tertiaryColor: #052446;
+$backgroundColor: #F3F3F3;
+$borderColor: #E6E6E6;
+
+$phoneSize: 768px;
+$tabletSize: 992px;
+
+@font-face{ 
+    font-family: 'ssstandard';
+    src: url('./fonts/ssstandard/ss-standard.eot');
+    src: url('./fonts/ssstandard/ss-standard.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/ssstandard/ss-standard.woff') format('woff'),
+         url('./fonts/fonts/ssstandard/ss-standard.ttf') format('truetype'),
+         url('./fonts/ssstandard/ss-standard.svg#webfont') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

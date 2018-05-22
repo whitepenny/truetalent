@@ -1,0 +1,141 @@
+body {
+    background: #000;
+    color: #777;
+}
+
+.bg {
+    background: #fff;
+}
+
+@define-mixin main-heading {
+    font-family: $headingFont;
+    font-size: 4.4rem;
+    line-height: 5.2rem;
+
+    @media (min-width: $phoneSize) {
+        font-size: 9.8rem;
+        line-height: 10.8rem;
+    }
+
+}
+
+@define-mixin secondary-heading {
+    font-family: $headingFont;
+    font-size: 4.0rem;
+    line-height: 4.8rem;
+
+    @media (min-width: $phoneSize) {
+        font-size: 7.0rem;
+        line-height: 7.6rem;    
+    }
+}
+
+@define-mixin tertiary-heading {
+    font-family: $headingFont;
+
+    font-size: 2.4rem;
+    line-height: 3.0rem;
+
+    @media (min-width: $phoneSize) {
+        font-size: 4.0rem;
+        line-height: 5.0rem;
+    }
+}
+
+@define-mixin tertiary-heading__decorated {
+    @mixin tertiary-heading;
+    padding-bottom: 2.0rem;
+    border-bottom: .7rem solid #000;
+    margin-bottom: 2.6rem;
+}
+
+@define-mixin standard-heading {
+    font-family: $headingFont;
+    font-size: 2.0rem;
+    line-height: 3.0rem;    
+
+    @media (min-width: $phoneSize) {
+        font-size: 2.4rem;
+        line-height: 3.4rem;
+    }
+    
+}
+
+@define-mixin whisper {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+}
+
+.continue {
+    @mixin whisper;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    
+    &:after {
+        display: inline-block;
+        position: relative;
+        top: .4rem;
+        content: url('../dist/img/continue.svg');
+        margin-left: .4rem;
+        color: $mainColor;
+
+    }
+
+    &:hover {
+        color: #999;
+    }
+}
+
+@define-mixin date {
+    @mixin whisper;
+    color: $mainColor;
+    display: inline-block;
+    padding: .4rem 1.0rem;
+    background: #000;
+}
+
+.date {
+    @mixin date;
+}
+
+.pagination {
+    text-align: center;
+
+
+    ul {
+        li {
+            display: inline-block;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
+    }
+}
+
+.pagination .next, .pagination .prev {
+    font-family: 'ssstandard';
+    font-size: 1rem;
+}
+
+.page-numbers {
+    display: inline-block;
+    font-weight: bold;
+    
+
+    &.current {
+        background: $mainColor;
+        color: #000;
+    }
+}
+
+span.page-numbers, a.page-numbers {
+    background: #fafafa;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 1.4rem;
+}

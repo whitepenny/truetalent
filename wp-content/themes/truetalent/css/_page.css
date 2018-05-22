@@ -1,0 +1,102 @@
+.main {
+    @mixin container;
+    padding: 2.0rem;
+}
+
+.default-page {
+    padding: 5.0rem 2.0rem;
+}
+
+.page-header {
+    @mixin cover-background;
+    padding: 15.0rem 0 5.0rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    @media (min-width: $phoneSize) {
+        padding: 15.0rem 0;    
+    }
+    
+}
+
+.search .page-header {
+    padding: 15.0rem 0 5.0rem 0;
+
+    @media (min-width: $phoneSize) {
+        padding-bottom: 0rem;
+    }
+}
+
+.blog, .single-post, .page-template-page-team, .single-member, .search {
+    .page-header {
+        color: #222;
+    }
+}
+
+.page-header__container {
+    width: 80%;
+    text-align: center;
+
+    @media (min-width: $phoneSize) {
+        width: 50%;
+    }
+}
+
+.page-header__heading {
+    @mixin main-heading;    
+    color: #fff;
+    margin-bottom: 2.0rem;
+    text-align: center;
+    
+}
+
+
+.blog, .single-post, .page-template-page-team, .single-member, .search {
+    .page-header__heading {
+        color: #000;
+    }
+
+}
+
+.page-header__location {
+    font-size: 3.0rem;
+    line-height: 3.4rem;
+    color: #fff;
+    margin-bottom: 3.0rem;
+}
+
+.page-header__content {
+    @mixin standard-heading;
+    font-size: 1.8rem;
+    font-weight: normal;
+    margin-bottom: 3.0rem;
+
+    @media (min-width: $phoneSize) {
+        @mixin standard-heading;
+    }
+}
+
+.page-header__content {
+    margin: 0 auto;
+}
+
+.wp-caption.aligncenter {
+    margin: 0 auto;
+    max-width: 100%;
+    font-style: italic;
+    font-size: 1.4rem;
+}
+
+.section-heading {
+    color: #ccc;
+    text-transform: uppercase;
+    @mixin whisper;
+    font-family: $bodyFont;
+    font-weight: bold;
+    border-bottom: 4px solid #e2e2e2;
+    width: 240px;
+    text-align: center;
+    margin: 0 auto;
+}
