@@ -57,10 +57,6 @@
         width: auto;
     }
 
-    .field_sublabel_below label {
-        display: none;
-    }
-
     .ginput_complex {
         @media (min-width: $phoneSize) {
             display: flex;

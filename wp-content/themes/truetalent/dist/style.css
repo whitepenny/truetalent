@@ -2601,9 +2601,6 @@ span.page-numbers, a.page-numbers {
 .contact-form input[type="submit"] { 
     width: auto;
 }
-.contact-form .field_sublabel_below label { 
-    display: none;
-}
 @media (min-width: 768px) {
     .contact-form .ginput_complex { 
         display: -webkit-box; 
