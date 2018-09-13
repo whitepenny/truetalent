@@ -105,17 +105,7 @@
 </div>
 
        
-<div class="cta">
-    <div class="cta__content">
-        <h2>
-            Sign up for updates and learn about our event series.
-        </h2>
 
-        <div class="cta-form">
-            <?php echo do_shortcode( '[contact-form-7 id="40" title="Event Sign Up"]'); ?>
-        </div>
-    </div>
-</div>
 
 <?php get_footer(); ?>
 

@@ -87,6 +87,8 @@
 
 <div class="home-events">
     <div class="main">
+
+        <?php if(have_rows('events')): ?>
         <h2 class="home-events__heading">Event Series</h2>
         
         <?php while(have_rows('events')) : the_row(); ?>
@@ -132,6 +134,7 @@
 
 
         <?php endwhile; ?>
+        <?php endif; ?>
     </div>
 </div>
 
